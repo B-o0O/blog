@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# VuePress build output
+docs/.vuepress/dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Git
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# Lock files
+package-lock.json
+yarn.lock
