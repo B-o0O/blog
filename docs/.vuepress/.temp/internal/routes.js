@@ -19,6 +19,8 @@ export const routes = Object.fromEntries([
   ["/posts/article9.html", { loader: () => import(/* webpackChunkName: "posts_article9.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/posts/article9.html.js"), meta: {"_blog":{"title":"Article 9","author":"","date":"2022-01-09T00:00:00.000Z","category":["Category A","Category B"],"tag":["tag C","tag D"],"excerpt":"\n<h2>Heading 2</h2>\n<p>Here is the content.</p>\n<h3>Heading 3</h3>\n<p>Here is the content.</p>\n"},"title":"Article 9"} }],
   ["/posts/sticky.html", { loader: () => import(/* webpackChunkName: "posts_sticky.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/posts/sticky.html.js"), meta: {"_blog":{"title":"Sticky Article","author":"","date":"2021-01-01T00:00:00.000Z","category":["Category C"],"tag":["tag E"],"excerpt":"<p>A sticky article demo.</p>"},"title":"Sticky Article"} }],
   ["/posts/sticky2.html", { loader: () => import(/* webpackChunkName: "posts_sticky2.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/posts/sticky2.html.js"), meta: {"_blog":{"title":"Sticky Article with Higher Priority","author":"","date":"2020-01-01T00:00:00.000Z","category":["Category C"],"tag":["tag E"],"excerpt":"\n<p>Excerpt information which is added manually.</p>\n"},"title":"Sticky Article with Higher Priority"} }],
+  ["/todolist/", { loader: () => import(/* webpackChunkName: "todolist_index.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/todolist/index.html.js"), meta: {"title":""} }],
+  ["/todolist/todolist.html", { loader: () => import(/* webpackChunkName: "todolist_todolist.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/todolist/todolist.html.js"), meta: {"title":"Todo List"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
   ["/category/", { loader: () => import(/* webpackChunkName: "category_index.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/category/index.html.js"), meta: {"title":"Categories"} }],
   ["/category/history/", { loader: () => import(/* webpackChunkName: "category_history_index.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/category/history/index.html.js"), meta: {"title":"Category History"} }],
@@ -36,3 +38,20 @@ export const routes = Object.fromEntries([
   ["/article/", { loader: () => import(/* webpackChunkName: "article_index.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/article/index.html.js"), meta: {"title":"Articles"} }],
   ["/timeline/", { loader: () => import(/* webpackChunkName: "timeline_index.html" */"E:/CS/blog/docs/.vuepress/.temp/pages/timeline/index.html.js"), meta: {"title":"Timeline"} }],
 ]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateRoutes) {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+  }
+  if (__VUE_HMR_RUNTIME__.updateRedirects) {
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ routes, redirects }) => {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
+}

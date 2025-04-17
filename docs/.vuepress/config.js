@@ -31,6 +31,10 @@ export default defineUserConfig({
         text: 'Timeline',
         link: '/timeline/',
       },
+      {
+        text: 'Todo',
+        link:'/todolist/todolist.md'
+      },
     ],
   }),
 
